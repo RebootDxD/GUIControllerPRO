@@ -340,7 +340,7 @@ QPushButton:hover{
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>background.jpg</pixmap>
+    <pixmap>img/background.jpg</pixmap>
    </property>
    <property name="indent">
     <number>0</number>
