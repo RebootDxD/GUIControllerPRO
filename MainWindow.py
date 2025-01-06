@@ -182,7 +182,7 @@ class Ui_Form(object):
         self.label_4 = QtWidgets.QLabel(Form)
         self.label_4.setGeometry(QtCore.QRect(0, 37, 800, 600))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("img/background.jpg"))
+        self.label_4.setPixmap(QtGui.QPixmap("background.jpg"))
         self.label_4.setIndent(0)
         self.label_4.setObjectName("label_4")
         self.label_2 = QtWidgets.QLabel(Form)
