@@ -155,7 +155,7 @@ QPushButton:hover{
     <string>Канал связи</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="AboutBtn">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -340,7 +340,7 @@ QPushButton:hover{
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>background.jpg</pixmap>
+    <pixmap>img/background.jpg</pixmap>
    </property>
    <property name="indent">
     <number>0</number>
@@ -549,12 +549,78 @@ QPushButton:hover{
     <string>Ячейка 10</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>564</y>
+     <width>721</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Ожидание подключения</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>580</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>img/wait.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>580</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>img/wait.png</pixmap>
+   </property>
+  </widget>
   <zorder>label_4</zorder>
   <zorder>label</zorder>
   <zorder>pushButton</zorder>
   <zorder>Prem_1</zorder>
   <zorder>pushButton_2</zorder>
-  <zorder>pushButton_4</zorder>
+  <zorder>AboutBtn</zorder>
   <zorder>Prem_2</zorder>
   <zorder>Prem_3</zorder>
   <zorder>Prem_4</zorder>
@@ -565,6 +631,9 @@ QPushButton:hover{
   <zorder>Prem_8</zorder>
   <zorder>Prem_9</zorder>
   <zorder>Prem_10</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
  </widget>
  <resources/>
  <connections/>

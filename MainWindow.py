@@ -85,14 +85,14 @@ class Ui_Form(object):
 "        background-color:rgba(186, 186, 186, 0.25);\n"
 "}")
         self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_4 = QtWidgets.QPushButton(Form)
-        self.pushButton_4.setGeometry(QtCore.QRect(110, 3, 61, 31))
+        self.AboutBtn = QtWidgets.QPushButton(Form)
+        self.AboutBtn.setGeometry(QtCore.QRect(110, 3, 61, 31))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setPointSize(10)
         font.setBold(True)
-        self.pushButton_4.setFont(font)
-        self.pushButton_4.setStyleSheet("QPushButton{\n"
+        self.AboutBtn.setFont(font)
+        self.AboutBtn.setStyleSheet("QPushButton{\n"
 "        border : 0px;\n"
 "        background: transparent;\n"
 "        color:white;\n"
@@ -102,7 +102,7 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "        background-color:rgba(186, 186, 186, 0.25);\n"
 "}")
-        self.pushButton_4.setObjectName("pushButton_4")
+        self.AboutBtn.setObjectName("AboutBtn")
         self.Prem_2 = QtWidgets.QPushButton(Form)
         self.Prem_2.setEnabled(False)
         self.Prem_2.setGeometry(QtCore.QRect(120, 330, 85, 35))
@@ -182,7 +182,7 @@ class Ui_Form(object):
         self.label_4 = QtWidgets.QLabel(Form)
         self.label_4.setGeometry(QtCore.QRect(0, 37, 800, 600))
         self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("background.jpg"))
+        self.label_4.setPixmap(QtGui.QPixmap("img/background.jpg"))
         self.label_4.setIndent(0)
         self.label_4.setObjectName("label_4")
         self.label_2 = QtWidgets.QLabel(Form)
@@ -292,12 +292,36 @@ class Ui_Form(object):
 "        background-color:rgba(186, 186, 186, 0.15);\n"
 "}")
         self.Prem_10.setObjectName("Prem_10")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setEnabled(True)
+        self.label_3.setGeometry(QtCore.QRect(10, 564, 721, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semibold")
+        font.setPointSize(10)
+        font.setBold(True)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("background: transparent;\n"
+"color: white;\n"
+"")
+        self.label_3.setObjectName("label_3")
+        self.label_5 = QtWidgets.QLabel(Form)
+        self.label_5.setGeometry(QtCore.QRect(760, 580, 16, 16))
+        self.label_5.setStyleSheet("background: transparent;")
+        self.label_5.setText("")
+        self.label_5.setPixmap(QtGui.QPixmap("img/wait.png"))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(Form)
+        self.label_6.setGeometry(QtCore.QRect(780, 580, 16, 16))
+        self.label_6.setStyleSheet("background: transparent;")
+        self.label_6.setText("")
+        self.label_6.setPixmap(QtGui.QPixmap("img/wait.png"))
+        self.label_6.setObjectName("label_6")
         self.label_4.raise_()
         self.label.raise_()
         self.pushButton.raise_()
         self.Prem_1.raise_()
         self.pushButton_2.raise_()
-        self.pushButton_4.raise_()
+        self.AboutBtn.raise_()
         self.Prem_2.raise_()
         self.Prem_3.raise_()
         self.Prem_4.raise_()
@@ -308,6 +332,9 @@ class Ui_Form(object):
         self.Prem_8.raise_()
         self.Prem_9.raise_()
         self.Prem_10.raise_()
+        self.label_3.raise_()
+        self.label_5.raise_()
+        self.label_6.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -319,7 +346,7 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "Установить свзять "))
         self.Prem_1.setText(_translate("Form", "Ячейка 10"))
         self.pushButton_2.setText(_translate("Form", "Канал связи"))
-        self.pushButton_4.setText(_translate("Form", "Help(H)"))
+        self.AboutBtn.setText(_translate("Form", "Help(H)"))
         self.Prem_2.setText(_translate("Form", "Ячейка 10"))
         self.Prem_3.setText(_translate("Form", "Ячейка 10"))
         self.Prem_4.setText(_translate("Form", "Ячейка 10"))
@@ -330,3 +357,4 @@ class Ui_Form(object):
         self.Prem_8.setText(_translate("Form", "Ячейка 10"))
         self.Prem_9.setText(_translate("Form", "Ячейка 10"))
         self.Prem_10.setText(_translate("Form", "Ячейка 10"))
+        self.label_3.setText(_translate("Form", "Ожидание подключения"))

@@ -1,13 +1,15 @@
+#imports ---------------------------------------------------------------------------------------------------------------
 import sys
 
 from PyQt5 import QtCore
-
-
 from PyQt5.QtWidgets import QApplication
-from qframelesswindow import FramelessWindow
+from qframelesswindow import FramelessWindow, FramelessDialog
 
-from MainWindow import Ui_Form #import .ui compiled to .py
+from MainWindow import Ui_Form  #imports .ui compiled to .py
+from AboutWindow import Ui_About
 
+
+#-----------------------------------------------------------------------------------------------------------------------
 
 class Window(FramelessWindow, Ui_Form):
 
@@ -16,6 +18,19 @@ class Window(FramelessWindow, Ui_Form):
         self.setupUi(self)
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
+        self.AboutBtn.clicked.connect(WindowDialog)
+
+
+class WindowDialog(FramelessDialog, Ui_About):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setStyleSheet("background-color: #79215b")
+        self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
+        self.label_3.setText('<a href="https://github.com/RebootDxD"> <img src="img/git.png" width="32" height="32"> </a>')
+        self.label_3.setOpenExternalLinks(True)
+
+        self.exec_()
 
 
 if __name__ == '__main__':
