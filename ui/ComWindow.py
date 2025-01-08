@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'com.ui'
+# Form implementation generated from reading ui file 'comWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -23,7 +23,7 @@ class Ui_Com(object):
         self.label_8 = QtWidgets.QLabel(Com)
         self.label_8.setGeometry(QtCore.QRect(1, 32, 711, 601))
         self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap("img/background.jpg"))
+        self.label_8.setPixmap(QtGui.QPixmap(":/image/background.jpg"))
         self.label_8.setObjectName("label_8")
         self.ComSetComboBox = QtWidgets.QComboBox(Com)
         self.ComSetComboBox.setGeometry(QtCore.QRect(230, 47, 111, 31))
@@ -65,6 +65,16 @@ class Ui_Com(object):
 "    border-radius: 4px;\n"
 "}")
         self.ComSetComboBox.setObjectName("ComSetComboBox")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
+        self.ComSetComboBox.addItem("")
         self.pushButton = QtWidgets.QPushButton(Com)
         self.pushButton.setGeometry(QtCore.QRect(230, 180, 61, 31))
         font = QtGui.QFont()
@@ -141,6 +151,10 @@ class Ui_Com(object):
 "    border-radius: 4px;\n"
 "}")
         self.ComSetComboBox_2.setObjectName("ComSetComboBox_2")
+        self.ComSetComboBox_2.addItem("")
+        self.ComSetComboBox_2.addItem("")
+        self.ComSetComboBox_2.addItem("")
+        self.ComSetComboBox_2.addItem("")
         self.label = QtWidgets.QLabel(Com)
         self.label.setEnabled(True)
         self.label.setGeometry(QtCore.QRect(40, 40, 51, 41))
@@ -172,8 +186,22 @@ class Ui_Com(object):
     def retranslateUi(self, Com):
         _translate = QtCore.QCoreApplication.translate
         Com.setWindowTitle(_translate("Com", "Form"))
+        self.ComSetComboBox.setItemText(0, _translate("Com", "COM1"))
+        self.ComSetComboBox.setItemText(1, _translate("Com", "COM2"))
+        self.ComSetComboBox.setItemText(2, _translate("Com", "COM3"))
+        self.ComSetComboBox.setItemText(3, _translate("Com", "COM4"))
+        self.ComSetComboBox.setItemText(4, _translate("Com", "COM5"))
+        self.ComSetComboBox.setItemText(5, _translate("Com", "COM6"))
+        self.ComSetComboBox.setItemText(6, _translate("Com", "COM7"))
+        self.ComSetComboBox.setItemText(7, _translate("Com", "COM8"))
+        self.ComSetComboBox.setItemText(8, _translate("Com", "COM9"))
+        self.ComSetComboBox.setItemText(9, _translate("Com", "COM10"))
         self.pushButton.setText(_translate("Com", "Ок"))
         self.pushButton_2.setText(_translate("Com", "Отмена"))
+        self.ComSetComboBox_2.setItemText(0, _translate("Com", "115200"))
+        self.ComSetComboBox_2.setItemText(1, _translate("Com", "57600"))
+        self.ComSetComboBox_2.setItemText(2, _translate("Com", "38400"))
+        self.ComSetComboBox_2.setItemText(3, _translate("Com", "9600"))
         self.label.setText(_translate("Com", "Порт"))
         self.label_2.setText(_translate("Com", "Скорость предачи"))
 
