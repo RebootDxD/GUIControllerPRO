@@ -5,9 +5,9 @@ from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication
 from qframelesswindow import FramelessWindow, FramelessDialog
 
-from MainWindow import Ui_Form  #imports .ui compiled to .py
-from AboutWindow import Ui_About
-from ComWindow import Ui_Com
+from ui.MainWindow import Ui_Form  #imports .ui compiled to .py
+from ui.AboutWindow import Ui_About
+from ui.ComWindow import Ui_Com
 import img.res # impor img
 
 #-----------------------------------------------------------------------------------------------------------------------

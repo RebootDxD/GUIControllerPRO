@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>GUIController PRO</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>289</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Теплоком ПРЭМ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}</string>
+   </property>
+   <property name="text">
+    <string>Установить свзять </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Prem_1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ComSetBtn">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>3</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: transparent;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:rgba(186, 186, 186, 0.25);
+}</string>
+   </property>
+   <property name="text">
+    <string>Канал связи</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AboutBtn">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>3</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: transparent;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:rgba(186, 186, 186, 0.25);
+}</string>
+   </property>
+   <property name="text">
+    <string>О прогрмме</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>37</y>
+     <width>800</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/res.qrc">:/image/background.jpg</pixmap>
+   </property>
+   <property name="indent">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>389</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Питерфлоу РС</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>564</y>
+     <width>721</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Ожидание подключения</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>580</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/res.qrc">:/ico/wait.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>580</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/res.qrc">:/ico/wait.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Prem_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>330</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Prem_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>330</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Prem_4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>330</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Prem_5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>330</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PC_1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>430</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PC_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>430</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PC_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>430</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PC_4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>430</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PC_5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>430</y>
+     <width>85</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ячейка 10</string>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>label</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>Prem_1</zorder>
+  <zorder>ComSetBtn</zorder>
+  <zorder>AboutBtn</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>Prem_2</zorder>
+  <zorder>Prem_3</zorder>
+  <zorder>Prem_4</zorder>
+  <zorder>Prem_5</zorder>
+  <zorder>PC_1</zorder>
+  <zorder>PC_2</zorder>
+  <zorder>PC_3</zorder>
+  <zorder>PC_4</zorder>
+  <zorder>PC_5</zorder>
+ </widget>
+ <resources>
+  <include location="img/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
