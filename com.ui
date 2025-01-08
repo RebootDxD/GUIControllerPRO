@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Com</class>
+ <widget class="QWidget" name="Com">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>398</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>32</y>
+     <width>711</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>img/background.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="ComSetComboBox">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>47</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+	border: 1px solid #511352;
+	border-radius: 4px;
+	padding-left: 10px;
+	background-color: #79215b;
+	padding-left: 10px;
+	color: white;
+}
+
+QComboBox::drop-down{
+	border: 0px ;
+}
+QComboBox::down-arrow{
+	image:url(:/ico/arrow-down.png);
+	width: 16px;
+	height: 16px;
+	margin-right: 15px;
+	margin-top: 2px;
+}
+
+QComboBox QListView{
+	font-size: 12px;
+	border: 1px solid #511352;
+	padding: 5px;
+	background-color: #79215b;
+	outline: 0px;
+	border-radius: 4px;
+}
+QComboBox QListView::item:selected{
+ 	background-color: rgba(61, 17, 46, 50);
+	border-radius: 4px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>180</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #511352;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ок</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>180</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #511352;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}</string>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="ComSetComboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>97</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+	border: 1px solid #511352;
+	border-radius: 4px;
+	padding-left: 10px;
+	background-color: #79215b;
+	padding-left: 10px;
+	color: white;
+}
+
+QComboBox::drop-down{
+	border: 0px ;
+}
+QComboBox::down-arrow{
+	image:url(:/ico/arrow-down.png);
+	width: 16px;
+	height: 16px;
+	margin-right: 15px;
+	margin-top: 2px;
+}
+
+QComboBox QListView{
+	font-size: 12px;
+	border: 1px solid #511352;
+	padding: 5px;
+	background-color: #79215b;
+	outline: 0px;
+	border-radius: 4px;
+}
+QComboBox QListView::item:selected{
+ 	background-color: rgba(61, 17, 46, 50);
+	border-radius: 4px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Порт</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>90</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Скорость предачи</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="img/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -7,7 +7,8 @@ from qframelesswindow import FramelessWindow, FramelessDialog
 
 from MainWindow import Ui_Form  #imports .ui compiled to .py
 from AboutWindow import Ui_About
-
+from ComWindow import Ui_Com
+import img.res # impor img
 
 #-----------------------------------------------------------------------------------------------------------------------
 
@@ -19,6 +20,7 @@ class Window(FramelessWindow, Ui_Form):
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.AboutBtn.clicked.connect(WindowDialog)
+        self.ComSetBtn.clicked.connect(WindowCom)
 
 
 class WindowDialog(FramelessDialog, Ui_About):
@@ -32,6 +34,13 @@ class WindowDialog(FramelessDialog, Ui_About):
 
         self.exec_()
 
+class WindowCom(FramelessDialog, Ui_Com):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setStyleSheet("background-color: #79215b")
+
+        self.exec_()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

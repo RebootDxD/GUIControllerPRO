@@ -72,7 +72,7 @@ class Ui_About(object):
         self.label_3.setGeometry(QtCore.QRect(10, 290, 32, 32))
         self.label_3.setStyleSheet("background: transparent;\n"
 "")
-        self.label_3.setPixmap(QtGui.QPixmap("img/github-mark-white.png"))
+        self.label_3.setPixmap(QtGui.QPixmap(":/ico/git.png"))
         self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(About)
@@ -104,3 +104,4 @@ class Ui_About(object):
         self.label_6.setText(_translate("About", "Release 1.0"))
         self.label_2.setText(_translate("About", "Узкоспециализированное ПО предназначенное для работы с модулем переключения каналов связи ЭМР (электромагнитных расходомеров) для ускорения калибровочного процесса."))
         self.label_4.setText(_translate("About", "RebootDxD"))
+

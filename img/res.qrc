@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="ico">
+    <file>git.png</file>
+    <file>active.png</file>
+    <file>arrow-down.png</file>
+    <file>wait.png</file>
+  </qresource>
+  <qresource prefix="image">
+    <file>background.jpg</file>
+  </qresource>
+</RCC>
