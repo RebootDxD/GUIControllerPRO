@@ -3,17 +3,15 @@ import sys
 
 from PyQt5 import QtCore
 from PyQt5.QtCore import QTimer, QIODevice
-from PyQt5.QtGui import QPixmap
 from PyQt5.QtSerialPort import QSerialPort
 from PyQt5.QtWidgets import QApplication
 from qframelesswindow import FramelessWindow, FramelessDialog
 
 from python.config import check_cfg, read_cfg, save_cfg
-from ui.MainWindow import Ui_Form  # imports .ui compiled to .py
+from ui.MainWindow import Ui_Form
 from ui.AboutWindow import Ui_About
 from ui.ComWindow import Ui_Com
-import img.res  # import img
-import python.config
+import img.res
 
 
 # Main window-----------------------------------------------------------------------------------------------------------
@@ -41,52 +39,9 @@ class Window(FramelessWindow, Ui_Form):
         self.PC_3.clicked.connect(lambda: radio(8))
         self.PC_4.clicked.connect(lambda: radio(9))
         self.PC_5.clicked.connect(lambda: radio(10))
-        # serial----------------------------------------------------------------------------------------------------------------
-        serial = QSerialPort()
-
-        def check():
-            err = serial.error()
-            return err
-
-        def on_open():
-            list_serial = read_cfg()
-            com, baud = list_serial[0], list_serial[1]
-            serial.setPortName(com)
-            serial.setBaudRate(int(baud))
-            serial.open(QIODevice.ReadWrite)
-            if check() == 0:
-                print("Serial port open successfully")
-                QTimer.singleShot(2000, lambda: on_send("0"))
-            else:
-                print("Serial port error")
-                serial.close()
-
-        def on_send(message):
-            if check() == 0:
-                serial.write(message.encode())
-            else:
-                print("serial print error")
-                serial.close()
-
-        list_serial = read_cfg()
-        com = list_serial[0]
-
-        def on_read():
-            if serial.canReadLine():
-                rx = serial.readLine()
-                data = str(rx, 'UTF-8').strip()
-                if data[0] == "#":
-                    ver = data[1:]
-                    print("Software version " + ver)
-                    self.label_3.setText("Подключено к " + list_serial[0] + " ПО v" + ver)
-                else:
-                    print(data)
-            else:
-                print("read error")
-
-        serial.readyRead.connect(on_read)
 
         def open():
+            self.label_3.setText("Выполняеться подключение к " + list_serial[0])
             on_open()
             if check() == 0:
                 self.pushButton.setEnabled(False)
@@ -102,26 +57,6 @@ class Window(FramelessWindow, Ui_Form):
 
             else:
                 print("dialog error")
-
-        def on_close():
-            serial.close()
-            print("Serial port close successfully")
-
-        def close():
-            on_close()
-            self.pushButton_2.setEnabled(False)
-            self.pushButton.setEnabled(True)
-            self.Prem_1.setEnabled(False)
-            self.Prem_2.setEnabled(False)
-            self.Prem_3.setEnabled(False)
-            self.Prem_4.setEnabled(False)
-            self.Prem_5.setEnabled(False)
-            self.PC_1.setEnabled(False)
-            self.PC_2.setEnabled(False)
-            self.PC_3.setEnabled(False)
-            self.PC_4.setEnabled(False)
-            self.PC_5.setEnabled(False)
-            self.label_3.setText("Ожидание подключения")
 
         def radio(device):  # 1+ 1,2,3,4,5 = prem ; 2+ 1,2,3,4,5 = PC
             if device == 1:
@@ -195,6 +130,68 @@ class Window(FramelessWindow, Ui_Form):
                 self.PC_5.setEnabled(False)
                 on_send("10")
 
+        def close():
+            on_close()
+            self.pushButton_2.setEnabled(False)
+            self.pushButton.setEnabled(True)
+            self.Prem_1.setEnabled(False)
+            self.Prem_2.setEnabled(False)
+            self.Prem_3.setEnabled(False)
+            self.Prem_4.setEnabled(False)
+            self.Prem_5.setEnabled(False)
+            self.PC_1.setEnabled(False)
+            self.PC_2.setEnabled(False)
+            self.PC_3.setEnabled(False)
+            self.PC_4.setEnabled(False)
+            self.PC_5.setEnabled(False)
+            self.label_3.setText("Ожидание подключения")
+
+        # serial--------------------------------------------------------------------------------------------------------
+        serial = QSerialPort()
+        list_serial = read_cfg()
+        com, baud = list_serial[0], list_serial[1]
+
+        def check():
+            err = serial.error()
+            return err
+
+        def on_open():
+            serial.setPortName(com)
+            serial.setBaudRate(int(baud))
+            serial.open(QIODevice.ReadWrite)
+            if check() == 0:
+                print("Serial port open successfully")
+                QTimer.singleShot(2000, lambda: on_send("0"))
+            else:
+                print("Serial port error")
+                serial.close()
+
+        def on_send(message):
+            if check() == 0:
+                serial.write(message.encode())
+            else:
+                print("serial print error")
+                serial.close()
+
+        def on_read():
+            if serial.canReadLine():
+                rx = serial.readLine()
+                data = str(rx, 'UTF-8').strip()
+                if data[0] == "#":
+                    ver = data[1:]
+                    print("Software version " + ver)
+                    self.label_3.setText("Подключено к " + list_serial[0] + " ПО v" + ver)
+                else:
+                    print(data)
+            else:
+                print("read error")
+
+        serial.readyRead.connect(on_read)
+
+        def on_close():
+            serial.close()
+            print("Serial port close successfully")
+
         # cfg-----------------------------------------------------------------------------------------------------------
         check_cfg()
 
@@ -205,6 +202,7 @@ class WindowCom(FramelessDialog, Ui_Com):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.setStyleSheet("background-color: #79215b;color:#fff;")
         list_serial = read_cfg()
         com, baud = list_serial[0], list_serial[1]
