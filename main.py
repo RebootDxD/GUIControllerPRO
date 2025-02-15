@@ -165,12 +165,9 @@ class Window(FramelessWindow, Ui_Form):
             serial.open(QIODevice.ReadWrite)
             if check() == 0:
                 print("Serial port open successfully")
-                QTimer.singleShot(2000, lambda: on_send("0"))
+                QTimer.singleShot(1500, lambda: on_send("0"))
             else:
-                self.pushButton.setEnabled(True)
-                self.pushButton_2.setEnabled(False)
-                ErrorDialog()
-                on_close()
+                print("Serial error")
 
         def on_send(message):
             if check() == 0:
