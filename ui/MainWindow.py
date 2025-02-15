@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui.ui'
+# Form implementation generated from reading ui file 'ui/MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -46,6 +46,9 @@ class Ui_Form(object):
 "}\n"
 "QPushButton:hover{\n"
 "        background-color:#390d39;\n"
+"}\n"
+"QPushButton:disabled{\n"
+"        background: #3c1c3a;\n"
 "}")
         self.pushButton.setObjectName("pushButton")
         self.Prem_1 = QtWidgets.QPushButton(Form)
@@ -136,18 +139,6 @@ class Ui_Form(object):
 "color: white;\n"
 "")
         self.label_3.setObjectName("label_3")
-        self.label_5 = QtWidgets.QLabel(Form)
-        self.label_5.setGeometry(QtCore.QRect(760, 580, 16, 16))
-        self.label_5.setStyleSheet("background: transparent;")
-        self.label_5.setText("")
-        self.label_5.setPixmap(QtGui.QPixmap(":/ico/wait.png"))
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(Form)
-        self.label_6.setGeometry(QtCore.QRect(780, 580, 16, 16))
-        self.label_6.setStyleSheet("background: transparent;")
-        self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap(":/ico/wait.png"))
-        self.label_6.setObjectName("label_6")
         self.Prem_2 = QtWidgets.QPushButton(Form)
         self.Prem_2.setEnabled(False)
         self.Prem_2.setGeometry(QtCore.QRect(120, 330, 85, 35))
@@ -346,6 +337,28 @@ class Ui_Form(object):
 "        background: #3c1c3a;\n"
 "}")
         self.PC_5.setObjectName("PC_5")
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        self.pushButton_2.setEnabled(False)
+        self.pushButton_2.setGeometry(QtCore.QRect(190, 90, 151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semibold")
+        font.setPointSize(10)
+        font.setBold(True)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"        border : 0px;\n"
+"        background: #50254d;\n"
+"        color:white;\n"
+"        border-radius: 8px;\n"
+"        pading-down:2px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"        background-color:#390d39;\n"
+"}\n"
+"QPushButton:disabled{\n"
+"        background: #3c1c3a;\n"
+"}")
+        self.pushButton_2.setObjectName("pushButton_2")
         self.label_4.raise_()
         self.label.raise_()
         self.pushButton.raise_()
@@ -354,8 +367,6 @@ class Ui_Form(object):
         self.AboutBtn.raise_()
         self.label_2.raise_()
         self.label_3.raise_()
-        self.label_5.raise_()
-        self.label_6.raise_()
         self.Prem_2.raise_()
         self.Prem_3.raise_()
         self.Prem_4.raise_()
@@ -365,6 +376,7 @@ class Ui_Form(object):
         self.PC_3.raise_()
         self.PC_4.raise_()
         self.PC_5.raise_()
+        self.pushButton_2.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -384,8 +396,9 @@ class Ui_Form(object):
         self.Prem_4.setText(_translate("Form", "Ячейка 4"))
         self.Prem_5.setText(_translate("Form", "Ячейка 2"))
         self.PC_1.setText(_translate("Form", "Ячейка 10"))
-        self.PC_2.setText(_translate("Form", "Ячейка 10"))
-        self.PC_3.setText(_translate("Form", "Ячейка 10"))
-        self.PC_4.setText(_translate("Form", "Ячейка 10"))
-        self.PC_5.setText(_translate("Form", "Ячейка 10"))
+        self.PC_2.setText(_translate("Form", "Ячейка 8"))
+        self.PC_3.setText(_translate("Form", "Ячейка 6"))
+        self.PC_4.setText(_translate("Form", "Ячейка 4"))
+        self.PC_5.setText(_translate("Form", "Ячейка 2"))
+        self.pushButton_2.setText(_translate("Form", "Разорвать связь"))
 

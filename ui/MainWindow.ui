@@ -82,6 +82,9 @@ color: white;
 }
 QPushButton:hover{
 		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
 }</string>
    </property>
    <property name="text">
@@ -203,7 +206,7 @@ QPushButton:hover{
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="img/res.qrc">:/image/background.jpg</pixmap>
+    <pixmap resource="../img/res.qrc">:/image/background.jpg</pixmap>
    </property>
    <property name="indent">
     <number>0</number>
@@ -263,44 +266,6 @@ color: white;
    </property>
    <property name="text">
     <string>Ожидание подключения</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>580</y>
-     <width>16</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: transparent;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="img/res.qrc">:/ico/wait.png</pixmap>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>780</x>
-     <y>580</y>
-     <width>16</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: transparent;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="img/res.qrc">:/ico/wait.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="Prem_2">
@@ -645,6 +610,44 @@ QPushButton:disabled{
     <string>Ячейка 10</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>90</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+		border : 0px;
+		background: #50254d;
+		color:white;
+		border-radius: 8px;
+		pading-down:2px;
+}
+QPushButton:hover{
+		background-color:#390d39;
+}
+QPushButton:disabled{
+		background: #3c1c3a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Разорвать связь</string>
+   </property>
+  </widget>
   <zorder>label_4</zorder>
   <zorder>label</zorder>
   <zorder>pushButton</zorder>
@@ -653,8 +656,6 @@ QPushButton:disabled{
   <zorder>AboutBtn</zorder>
   <zorder>label_2</zorder>
   <zorder>label_3</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
   <zorder>Prem_2</zorder>
   <zorder>Prem_3</zorder>
   <zorder>Prem_4</zorder>
@@ -664,8 +665,10 @@ QPushButton:disabled{
   <zorder>PC_3</zorder>
   <zorder>PC_4</zorder>
   <zorder>PC_5</zorder>
+  <zorder>pushButton_2</zorder>
  </widget>
  <resources>
+  <include location="../img/res.qrc"/>
   <include location="img/res.qrc"/>
  </resources>
  <connections/>

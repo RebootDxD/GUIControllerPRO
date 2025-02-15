@@ -6,7 +6,7 @@ patch = "C:/Users/potap/PycharmProjects/PythonProject/Settings.ini"
 
 def check_cfg():
     if os.path.exists("Settings.ini"):
-        print("cfg Exist!")
+        print("")
     else:
         cfg = ConfigParser()
         cfg.add_section("Settings")
@@ -16,7 +16,7 @@ def check_cfg():
         cfg.BaudRate = "115200"
         with open("Settings.ini", "w+") as configfile:
             cfg.write(configfile)
-        print("cfg create successfully")
+        print("")
 
 
 def read_cfg():
