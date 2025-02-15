@@ -11,6 +11,7 @@ from python.config import check_cfg, read_cfg, save_cfg
 from ui.MainWindow import Ui_Form
 from ui.AboutWindow import Ui_About
 from ui.ComWindow import Ui_Com
+from ui.ErrorDialog import Ui_Dialog
 import img.res
 
 
@@ -56,7 +57,10 @@ class Window(FramelessWindow, Ui_Form):
                 self.PC_5.setEnabled(True)
 
             else:
-                print("dialog error")
+                self.pushButton.setEnabled(True)
+                self.pushButton_2.setEnabled(False)
+                ErrorDialog()
+                serial.close()
 
         def radio(device):  # 1+ 1,2,3,4,5 = prem ; 2+ 1,2,3,4,5 = PC
             if device == 1:
@@ -163,15 +167,19 @@ class Window(FramelessWindow, Ui_Form):
                 print("Serial port open successfully")
                 QTimer.singleShot(2000, lambda: on_send("0"))
             else:
-                print("Serial port error")
-                serial.close()
+                self.pushButton.setEnabled(True)
+                self.pushButton_2.setEnabled(False)
+                ErrorDialog()
+                on_close()
 
         def on_send(message):
             if check() == 0:
                 serial.write(message.encode())
             else:
-                print("serial print error")
-                serial.close()
+                self.pushButton.setEnabled(True)
+                self.pushButton_2.setEnabled(False)
+                ErrorDialog()
+                on_close()
 
         def on_read():
             if serial.canReadLine():
@@ -184,7 +192,10 @@ class Window(FramelessWindow, Ui_Form):
                 else:
                     print(data)
             else:
-                print("read error")
+                self.pushButton.setEnabled(True)
+                self.pushButton_2.setEnabled(False)
+                ErrorDialog()
+                on_close()
 
         serial.readyRead.connect(on_read)
 
@@ -202,6 +213,7 @@ class WindowCom(FramelessDialog, Ui_Com):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("Выбор COM порта")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.setStyleSheet("background-color: #79215b;color:#fff;")
         list_serial = read_cfg()
@@ -226,12 +238,25 @@ class WindowDialog(FramelessDialog, Ui_About):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("О программе")
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.label_3.setText(
             '<a href="https://github.com/RebootDxD"> <img src="img/git.png" width="32" height="32"> </a>')
         self.label_3.setOpenExternalLinks(True)
 
+        self.exec_()
+
+
+# Error dialog----------------------------------------------------------------------------------------------------------
+class ErrorDialog(FramelessDialog, Ui_Dialog):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setWindowTitle("Ошибка")
+        self.setStyleSheet("background-color: #79215b")
+        self.setResizeEnabled(False)
+        self.pushButton.clicked.connect(lambda: self.close())
         self.exec_()
 
 
