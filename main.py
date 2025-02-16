@@ -1,8 +1,9 @@
 # imports---------------------------------------------------------------------------------------------------------------
 import sys
 
-from PyQt5 import QtCore
+from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import QTimer, QIODevice
+from PyQt5.QtGui import QIcon
 from PyQt5.QtSerialPort import QSerialPort
 from PyQt5.QtWidgets import QApplication
 from qframelesswindow import FramelessWindow, FramelessDialog
@@ -21,8 +22,11 @@ class Window(FramelessWindow, Ui_Form):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        # cfg-----------------------------------------------------------------------------------------------------------
+        check_cfg()
         # ui------------------------------------------------------------------------------------------------------------
         self.setupUi(self)
+        self.setWindowIcon(QIcon('75.png'))
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.AboutBtn.clicked.connect(WindowDialog)
@@ -200,8 +204,8 @@ class Window(FramelessWindow, Ui_Form):
             serial.close()
             print("Serial port close successfully")
 
-        # cfg-----------------------------------------------------------------------------------------------------------
-        check_cfg()
+
+
 
 
 # Com window------------------------------------------------------------------------------------------------------------

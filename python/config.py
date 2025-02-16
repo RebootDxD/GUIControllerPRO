@@ -1,7 +1,7 @@
 import os
 from configparser import ConfigParser
 
-patch = "C:/Users/potap/PycharmProjects/PythonProject/Settings.ini"
+
 
 
 def check_cfg():
@@ -21,7 +21,7 @@ def check_cfg():
 
 def read_cfg():
     cfg = ConfigParser()
-    cfg.read(patch)
+    cfg.read("Settings.ini")
     com = cfg.get("Settings", "COM")
     baud_rate_str = cfg.get("Settings", "baudRate")
     baud_rate = str(baud_rate_str)
