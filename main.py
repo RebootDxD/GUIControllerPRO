@@ -240,8 +240,11 @@ class WindowDialog(FramelessDialog, Ui_About):
         self.setWindowTitle("О программе")
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
-        self.label_3.setText(
-            '<a href="https://github.com/RebootDxD"> <img src="img/git.png" width="32" height="32"> </a>')
+        if hasattr(sys, '_MEIPASS'):
+            git_icon_path = os.path.join(sys._MEIPASS, 'img', 'git.png')
+        else:
+            git_icon_path = os.path.join('img', 'git.png')
+        self.label_3.setText(f'<a href="https://github.com/RebootDxD"> <img src="{git_icon_path}" width="32" height="32"> </a>')
         self.label_3.setOpenExternalLinks(True)
 
         self.exec_()
