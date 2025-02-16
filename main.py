@@ -1,6 +1,6 @@
 # imports---------------------------------------------------------------------------------------------------------------
 import sys
-
+import os
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import QTimer, QIODevice
 from PyQt5.QtGui import QIcon
@@ -22,11 +22,12 @@ class Window(FramelessWindow, Ui_Form):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+
         # cfg-----------------------------------------------------------------------------------------------------------
         check_cfg()
         # ui------------------------------------------------------------------------------------------------------------
         self.setupUi(self)
-        self.setWindowIcon(QIcon('75.png'))
+
         self.setStyleSheet("background-color: #79215b")
         self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.AboutBtn.clicked.connect(WindowDialog)
@@ -205,9 +206,6 @@ class Window(FramelessWindow, Ui_Form):
             print("Serial port close successfully")
 
 
-
-
-
 # Com window------------------------------------------------------------------------------------------------------------
 
 class WindowCom(FramelessDialog, Ui_Com):
@@ -264,7 +262,14 @@ class ErrorDialog(FramelessDialog, Ui_Dialog):
 # App setup-------------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
+    if hasattr(sys, "_MEIPASS"):
+        icon_path = os.path.join(sys._MEIPASS, "img/icon.ico")  # PyInstaller
+    else:
+        icon_path = "img/icon.ico"  # Обычный запуск
+
     app = QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon(icon_path))
     win = Window()
+    win.setWindowIcon(QtGui.QIcon(icon_path))
     win.show()
     sys.exit(app.exec_())
